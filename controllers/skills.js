@@ -15,8 +15,20 @@ function getOne (req, res){
     })
 }
 
+function newSkill(req, res){
+    res.render("skills/new", {heading: "New Skill"})
+}
+
+function addOne (req, res){
+    Skill.create(req.body);
+    res.redirect ("/skills")
+}
+
 module.exports ={
     index,
     getOne,
+    addOne,
+    newSkill,
+
 }
 

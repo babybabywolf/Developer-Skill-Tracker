@@ -15,7 +15,17 @@ const skills = [
     
   }
 
+  function create(s){//here parameter is an object, as we need to extract the content from the input by using res.body, which returns an object
+    s.skillId = skills.length;
+    s.status = "Beginner";
+    s.skillName =s.skill;
+    
+    skills.push(s);
+
+  }
+
   module.exports={
     getAll,
     getOne,
+    create,
   }
