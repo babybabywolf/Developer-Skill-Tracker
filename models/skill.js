@@ -24,8 +24,16 @@ const skills = [
 
   }
 
+  function deleteOne(id){
+    id = parseInt(id);
+    const index = skills.findIndex((skill)=>skill.skillId === id);
+    skills.splice(index, 1);
+
+  }
+
   module.exports={
     getAll,
     getOne,
     create,
+    deleteOne,
   }

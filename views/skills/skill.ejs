@@ -1,4 +1,9 @@
 <%- include('../partials/header') %>
     <h2><%=skill.skillName %></h2>
     <p>Status: <%=skill.status%></p>
+    <form action="/skills/<%= skill.skillId %>?_method=DELETE" method="POST">
+        
+        <button type="submit">Delete</button>
+        
+    </form>
     

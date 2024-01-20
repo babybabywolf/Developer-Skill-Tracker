@@ -10,6 +10,8 @@ router.get('/new', skillsController.newSkill);
 
 router.get('/:id', skillsController.getOne);
 router.post('/', skillsController.addOne);
+router.delete("/:id", skillsController.deleteSkill);
+
 
 
 
